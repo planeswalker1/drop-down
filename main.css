@@ -30,6 +30,12 @@ body{
   padding: 20px;
 }
 
+.menu__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
 .menu__list {
   list-style-type: none;
   padding: 0;
@@ -57,4 +63,14 @@ body{
 
 #menu {
   display: none;
+}
+
+/* toggle menu */
+
+#menu:checked ~ .menu__label {
+  background-image: url('images/open.png');
+}
+
+#menu:checked ~ .menu__content {
+  max-height: 618px;
 }
